@@ -49,14 +49,10 @@ internal class MenuService : IMenuService
                 
                 default:
                     break;
-
             }
         }
         while (exit == false);
     }
-
-
-
 
     public void CreateMenu()
     {
@@ -98,8 +94,18 @@ internal class MenuService : IMenuService
 
     public void ListSpecificMenu()
     {
-        throw new NotImplementedException();
+        Console.Clear();
+        Console.WriteLine("Användare");
+        Console.WriteLine("------------------------------------------------------");
+        Console.Write("Ange namn: ");
+        var name = Console.ReadLine()!.Trim().ToLower();
+        var user = _userService.Get(user => user.LastName == name || user.FirstName == name);
+
+        if (user != null)
+            Console.WriteLine($"{user.FirstName} {user.LastName} <{user.Email}>");
+        else
+            Console.WriteLine($"Hittar ej {name}");
+
+        Console.ReadKey();
     }
-
-
 }
