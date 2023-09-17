@@ -398,5 +398,16 @@ FodyWeavers.xsd
 *.sln.iml
 
 #Extra
-/obj/*
-/.vs/*
+*/obj/*
+*/.vs/*
+/Lektion-5/01_Exercise/bin/Debug/net7.0/01_Exercise.deps.json
+/Lektion-5/01_Exercise/bin/Debug/net7.0/01_Exercise.dll
+/Lektion-5/01_Exercise/bin/Debug/net7.0/01_Exercise.pdb
+/Lektion-5/01_Exercise/bin/Debug/net7.0/01_Exercise.runtimeconfig.json
+/Lektion-5/01_Exercise/obj/Debug/net7.0/refint/01_Exercise.dll
+/Lektion-5/01_Exercise/obj/Debug/net7.0/01_Exercise.assets.cache
+/Lektion-5/01_Exercise/obj/Debug/net7.0/01_Exercise.csproj.CoreCompileInputs.cache
+/Lektion-5/01_Exercise/obj/Debug/net7.0/01_Exercise.csproj.FileListAbsolute.txt
+/Lektion-5/01_Exercise/obj/Debug/net7.0/01_Exercise.dll
+/Lektion-5/01_Exercise/obj/Debug/net7.0/01_Exercise.genruntimeconfig.cache
+/Lektion-5/01_Exercise/obj/Debug/net7.0/01_Exercise.pdb
