@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "01_Assignment_Example": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
