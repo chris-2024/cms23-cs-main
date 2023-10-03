@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="8">
+            <Label>Lorem</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="8">
+            <Label>Ipsum</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+
+        <Label Grid.Row="2" Padding="0" Margin="8 0 0 0">Status</Label>
+    </Grid>
+</Window>
