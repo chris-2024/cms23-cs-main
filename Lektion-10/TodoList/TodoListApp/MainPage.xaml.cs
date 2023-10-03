@@ -1,24 +1,31 @@
-﻿namespace TodoListApp
+﻿using System.Collections.ObjectModel;
+using TodoListApp.Models;
+
+namespace TodoListApp;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    ObservableCollection<Todo> Todos = new ObservableCollection<Todo>();
+
+    public MainPage()
     {
-        int count = 0;
+        InitializeComponent();
+        CollectionViewTodoList.ItemsSource = Todos;
+    }
 
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+    private void AddButton_Clicked(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrWhiteSpace(TodoActivity.Text))
+            Todos.Add(new Todo { Activity = TodoActivity.Text.Trim() });
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
+        TodoActivity.Text = string.Empty;
+    }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+    private void DeleteButton_Clicked(object sender, EventArgs e)
+    {
+        var button = (Button)sender;
+        var todo = button.BindingContext as Todo;
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
+        Todos.Remove(todo);
     }
 }
