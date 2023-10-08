@@ -1,4 +1,5 @@
-﻿using Kanelbullen.ViewModels;
+﻿using Kanelbullen.Services;
+using Kanelbullen.ViewModels;
 using Kanelbullen.Views;
 
 namespace Kanelbullen
@@ -16,14 +17,16 @@ namespace Kanelbullen
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<MainViewModel>();
-            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MemberService>();
 
-            builder.Services.AddSingleton<DetailViewModel>();
-            builder.Services.AddSingleton<DetailPage>();
+            builder.Services.AddTransient<MainViewModel>();
+            builder.Services.AddTransient<MainPage>();
 
-            builder.Services.AddSingleton<EditViewModel>();
-            builder.Services.AddSingleton<EditPage>();
+            builder.Services.AddTransient<DetailViewModel>();
+            builder.Services.AddTransient<DetailPage>();
+
+            builder.Services.AddTransient<EditViewModel>();
+            builder.Services.AddTransient<EditPage>();
 
             return builder.Build();
         }
