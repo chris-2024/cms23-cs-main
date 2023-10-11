@@ -2,7 +2,7 @@
 
 namespace EnMauiApp.ViewModels;
 
-public class EditViewModel : ObservableObject
+public partial class EditViewModel : ObservableObject
 {
 
 }
