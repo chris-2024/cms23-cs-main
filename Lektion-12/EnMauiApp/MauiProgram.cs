@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using EnMauiApp.ViewModels;
+using EnMauiApp.Views;
+using Microsoft.Extensions.Logging;
 
 namespace EnMauiApp
 {
@@ -15,7 +17,17 @@ namespace EnMauiApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddSingleton<MainPage>();
 
+            builder.Services.AddSingleton<AddViewModel>();
+            builder.Services.AddSingleton<AddPage>();
+
+            builder.Services.AddSingleton<EditViewModel>();
+            builder.Services.AddSingleton<EditPage>();
+
+            builder.Services.AddSingleton<DetailsViewModel>();
+            builder.Services.AddSingleton<DetailsPage>();
 
             return builder.Build();
         }

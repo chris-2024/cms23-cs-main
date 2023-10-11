@@ -5,11 +5,28 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:EnMauiApp"
     xmlns:views="clr-namespace:EnMauiApp.Views"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:viewmodels="clr-namespace:EnMauiApp.ViewModels"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
     <ShellContent
-        Title="Home"
+        BindingContext="{x:Type viewmodels:MainViewModel}"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
+
+    <!--<ShellContent
+        BindingContext="{x:Type viewmodels:AddViewModel}"
+        ContentTemplate="{DataTemplate views:AddPage}"
+        Route="AddPage" />
+
+    <ShellContent
+        BindingContext="{x:Type viewmodels:EditViewModel}"
+        ContentTemplate="{DataTemplate views:EditPage}"
+        Route="EditPage" />
+
+    <ShellContent
+        BindingContext="{x:Type viewmodels:DetailsViewModel}"
+        ContentTemplate="{DataTemplate views:DetailsPage}"
+        Route="DetailsPage" />-->
 
 </Shell>

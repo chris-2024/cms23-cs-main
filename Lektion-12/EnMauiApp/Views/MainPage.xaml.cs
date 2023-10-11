@@ -1,9 +1,12 @@
-﻿namespace EnMauiApp.Views;
+﻿using EnMauiApp.ViewModels;
+
+namespace EnMauiApp.Views;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
+    public MainPage(MainViewModel viewModel)
     {
         InitializeComponent();
+        BindingContext = viewModel;
     }
 }
